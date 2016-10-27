@@ -107,7 +107,7 @@ fzw.factory("productFactory", function ($http, $q) {
     return {
         query: function () {
             var deferred = $q.defer(); // 声明延后执行，表示要去监控后面的执行
-            $http.get("data.json")
+            $http.get("data/data.json")
                 .success(function (data, status, headers, config) {
                     deferred.resolve(data);  // 声明执行成功，即http请求数据成功，可以返回数据了
                 })
@@ -123,7 +123,7 @@ fzw.factory("productFactory", function ($http, $q) {
 // 这个单例对象会被缓存
 fzw.factory("dataFactory", function ($http) {
     var data = {productList: []};   // 一定要保存到对象中，不要直接保存到一个数组变量中
-    $http.get("data.json").success(function (_data, status, headers, config) {
+    $http.get("data/data.json").success(function (_data, status, headers, config) {
         data.productList = _data;
     });
     return {

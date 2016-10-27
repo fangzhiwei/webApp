@@ -15,7 +15,7 @@ angular.module("myapp")
         $scope.getRestaurants = function () {
             $scope.page++;  // 页数++
 
-            var url = "restaurants.json";   // 请求的url
+            var url = "data/restaurants.json";   // 请求的url
             $http.get(url)
                 .success(function (response) {
                     angular.forEach(response.restaurants, function (restaurant) {
