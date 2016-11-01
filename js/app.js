@@ -8,7 +8,8 @@ var fzw = angular.module("myapp",["ionic"]);
 //fzw.controller();
 
 
-fzw.config(function($stateProvider,$urlRouterProvider){
+fzw.config(function($stateProvider,$urlRouterProvider,$ionicConfigProvider){
+    $ionicConfigProvider.tabs.position('bottom');
     $stateProvider.state("first",{
         url:"/first",
         templateUrl:"views/first/first.html",
