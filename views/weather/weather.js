@@ -13,7 +13,7 @@ angular.module("myapp").controller("weatherCtrl",function($scope,$http,$ionicLoa
     }).error(function(){
         //当AJAX请求失败时，出现一个提示信息
         $ionicLoading.show({
-            template:"暂时无法联网获得天气数据",
+            template:"暂时无法联网获得天气数据或者国外服务器无法获取国内天气API",
             duration:3000
         });
     })
